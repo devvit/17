@@ -8,7 +8,7 @@ RUN gcc -shared  -ldl -fPIC -o wrapper.so wrapper.c
 
 
 
-FROM docker pull mcr.microsoft.com/mssql/server:2022-latest
+FROM mcr.microsoft.com/mssql/server:2022-latest
 COPY --from=build0 /root/wrapper.so /root/
 
 
