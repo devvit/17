@@ -1,7 +1,5 @@
 FROM mcr.microsoft.com/mssql/server:2017-latest
 
-LABEL maintainer="fengying0347@163.com" 
-
 RUN cd /opt/mssql/bin/ && mv sqlservr sqlservr.old 
 COPY crack.py /opt/mssql/bin/
 WorkDir /opt/mssql/bin/
